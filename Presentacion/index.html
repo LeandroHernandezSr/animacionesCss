@@ -17,7 +17,7 @@
         <h1> Presentación</h1>
     </footer>
     <div class="contenedor">
-        <h2>Conceptos básicos de la animación CSS</h2>
+        <h2>Conceptos básicos de la animación en CSS</h2>
         <section class="sub-contenedor">
             <h3>Propiedad <span class="textColor">animation</span></h3>
             <p class="parrafo">
@@ -31,22 +31,96 @@
         </section>
 
         <section class="sub-contenedor">
-            <h3>Propiedad <span class="textColor">keyframe</span></h3>
+            <h3>Regla <span class="textColor">keyframe</span></h3>
             <p class="parrafo">
                 Los keyframes son puntos clave en una animación donde especificamos cómo se ve el elemento en ese
                 momento específico. Podemos definir varios keyframes para crear una animación más compleja.
             </p>
             <p class="parrafo def_css">
-                animation: <span class="color1">[animacion a utilizar]</span> <span class="color2">[duracion de la
-                    animacion]</span> <span class="color3">[nº repeteciones]</span>;
+                @keyframes <span class="color1">nombre-animacion</span> {
+                <br>
+                <span class="color2">0%</span> {<br>
+                /* Propiedades CSS en el inicio de la animación */<br>
+                }
+                <br>
+                <span class="color3">50%</span> {<br>
+                /* Propiedades CSS a la mitad de la animación */<br>
+                }<br>
+                <span class="color4">100%</span> {<br>
+                /* Propiedades CSS al final de la animación */<br>
+                }
+                }
+
+            </p>
+        </section>
+
+        <section class="sub-contenedor">
+            <h3>Funciones de <span class="textColor">temporización</span></h3>
+            <p class="parrafo">
+                Además de las animaciones basadas en keyframes, CSS también admite transiciones suaves entre los estados
+                de los elementos. Podemos definir propiedades como transition-property, transition-duration y
+                transition-timing-function para controlar las transiciones.
+            </p>
+            <p class="parrafo def_css">
+                <span class="color1">.nombre_de_clase</span>{<br>
+                <span class="color2">animation-timing-function</span>: linear;<br>
+                }
             </p>
         </section>
 
     </div>
-    <div class="contenedor changeColor">
-        <div class="box"></div>
-        <div class="box2"></div>
+    <div class="contenedor-grid">
+        <section class="sub-contenedor-ejemplo">
+            <h2 class="textColor">Ejemplo 1</h2>
+            <div class="box"></div>
+        </section>
+        <section class="sub-contenedor-ejemplo">
+            <h3>Codigo HTML</h3>
+            <img src="img/1.PNG" alt="codigoHTML">
+        </section>
+
+        <section class="sub-contenedor-ejemplo">
+            <h3>Codigo CSS</h3>
+            <img src="img/2.PNG" alt="codigoCSS">
+        </section>
     </div>
+
+    <div class="contenedor-grid">
+        <section class="sub-contenedor-ejemplo">
+            <h2 class="textColor">Ejemplo 2</h2>
+            <div class="box2"></div>
+        </section>
+
+        <section class="sub-contenedor-ejemplo">
+            <h3>Codigo HTML</h3>
+            <img src="img/3.PNG" alt="codigoHTML">
+        </section>
+
+        <section class="sub-contenedor-ejemplo">
+            <h3>Codigo CSS</h3>
+            <img src="img/4.PNG" alt="codigoCSS">
+        </section>
+
+    </div>
+
+    <div class="contenedor-grid">
+        <section class="sub-contenedor-ejemplo">
+            <h2 class="textColor">Ejemplo 3</h2>
+            <div class="box3"></div>
+        </section>
+
+        <section class="sub-contenedor-ejemplo">
+            <h3>Codigo HTML</h3>
+            <img src="img/5.PNG" alt="codigoHTML">
+        </section>
+
+        <section class="sub-contenedor-ejemplo">
+            <h3>Codigo CSS</h3>
+            <img src="img/6.PNG" alt="codigoCSS">
+        </section>
+
+    </div>
+
 </body>
 
 </html>

@@ -35,27 +35,27 @@ h3 {
     text-align: center;
     margin-top: 3rem;
     font-family: var(--fuente);
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;
     padding: 0;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .parrafo {
     font-family: var(--fuente);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
 }
 
 .def_css {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .color1 {
@@ -70,18 +70,8 @@ h3 {
     color: orange;
 }
 
-@keyframes changeColor {
-    0% {
-        background-color: red;
-    }
-
-    50% {
-        background-color: blue;
-    }
-
-    100% {
-        background-color: green;
-    }
+.color4 {
+    color: blueviolet;
 }
 
 @keyframes changeFontColor {
@@ -99,13 +89,17 @@ h3 {
 }
 
 
-@keyframes rotation {
+@keyframes changeColor {
     0% {
-        transform: rotate(180deg);
+        background-color: red;
+    }
+
+    50% {
+        background-color: blue;
     }
 
     100% {
-        transform: rotate(360deg);
+        background-color: green;
     }
 }
 
@@ -114,6 +108,16 @@ h3 {
     width: 200px;
     height: 200px;
     animation: changeColor 3s infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .box2 {
@@ -127,30 +131,50 @@ h3 {
     animation: changeFontColor 3s infinite;
 }
 
-.frase {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    position: relative;
-    font-family:var(--fuente);
-}
 
-.frase span::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    animation: escribir 5s linear;
-}
-
-@keyframes escribir {
+@keyframes animacion {
     0% {
-        width: 0;
+        transform: translateX(0);
     }
 
-    100% {
-        width: 100%;
+    25% {
+        transform: translateX(50px);
     }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    75% {
+        transform: translateX(-50px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    animation: animacion 2s infinite;
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.contenedor-grid{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0;
+}
+
+.sub-contenedor-ejemplo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
 }
